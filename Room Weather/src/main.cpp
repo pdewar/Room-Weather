@@ -4,6 +4,7 @@
 #include <Adafruit_Sensor.h>
 #include <ArduinoJson.h>
 #include "DHT.h"
+#include "password.h"
 
 #ifdef    ARDUINO_ARCH_ESP32
 
@@ -49,8 +50,8 @@ int tempThreshold = 100;        //default 100 initialized from node red
 RTC_DATA_ATTR int bootCount = 0;
 
 // Update these with values suitable for your network.
-const char* ssid = "ssid";
-const char* password = "password";
+// const char* ssid = "ssid";
+// const char* password = "password";
 const char* mqtt_server = "test.mosquitto.org";
 #define mqtt_port 1883
 //#define MQTT_USER "username"
