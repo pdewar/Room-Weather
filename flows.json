@@ -10,7 +10,7 @@
     {
         "id": "f4c92a06f466a446",
         "type": "mqtt-broker",
-        "name": "Test",
+        "name": "Eclipse Mosquitto",
         "broker": "test.mosquitto.org",
         "port": "1883",
         "clientid": "",
@@ -21,14 +21,17 @@
         "cleansession": true,
         "birthTopic": "",
         "birthQos": "0",
+        "birthRetain": "false",
         "birthPayload": "",
         "birthMsg": {},
         "closeTopic": "",
         "closeQos": "0",
+        "closeRetain": "false",
         "closePayload": "",
         "closeMsg": {},
         "willTopic": "",
         "willQos": "0",
+        "willRetain": "false",
         "willPayload": "",
         "willMsg": {},
         "sessionExpiry": ""
@@ -47,7 +50,7 @@
             },
             "darkTheme": {
                 "default": "#097479",
-                "baseColor": "#097479",
+                "baseColor": "#0974da",
                 "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
                 "edited": true,
                 "reset": false
@@ -61,11 +64,11 @@
             "themeState": {
                 "base-color": {
                     "default": "#097479",
-                    "value": "#097479",
-                    "edited": false
+                    "value": "#0974da",
+                    "edited": true
                 },
                 "page-titlebar-backgroundColor": {
-                    "value": "#097479",
+                    "value": "#0974da",
                     "edited": false
                 },
                 "page-backgroundColor": {
@@ -77,7 +80,7 @@
                     "edited": false
                 },
                 "group-textColor": {
-                    "value": "#0eb8c0",
+                    "value": "#399af7",
                     "edited": false
                 },
                 "group-borderColor": {
@@ -93,7 +96,7 @@
                     "edited": false
                 },
                 "widget-backgroundColor": {
-                    "value": "#097479",
+                    "value": "#0974da",
                     "edited": false
                 },
                 "widget-borderColor": {
@@ -177,18 +180,18 @@
         "type": "ui_template",
         "z": "24923811b8e933c7",
         "group": "d783cb980c3979fc",
-        "name": "Node-Red Dashboard Custom CSS",
+        "name": "template",
         "order": 1,
         "width": 0,
         "height": 0,
-        "format": "<style>\n\n    /*Main background*/\n    body {\n        background: -webkit-linear-gradient(\n            133deg,\n            #020024 0%,\n            #090979 35%,\n            #00d4ff 100%\n            );\n    }\n\n    /*Top bar*/\n    body.nr-dashboard-theme md-toolbar,\n    body.nr-dashboard-theme md-content md-card {\n        background-color: transparent !important;\n        color: #FFFFFF !important;\n    }\n    \n    body.nr-dashboard-theme md-toolbar{\n        border-bottom-style: solid;\n        border-bottom-color: #0000001c;\n    }\n\n    /*Left menu*/\n    /*Sidebar*/\n    body.nr-dashboard-theme md-sidenav {\n        color: white !important;\n        background-color: rgba(0,0,0,0) !important;\n    }\n    /*Hover selection*/\n    a.md-no-style, button.md-no-style {\n        border-radius: 10px !important;\n    }\n    /*Selected*/\n    .nr-menu-item-active div button {\n        border-right: 4px solid rgb(41 98 255) !important;\n    }\n    /*List*/\n    body.nr-dashboard-theme md-sidenav div.md-list-item-inner {\n        color: white !important;\n        background-color: rgba(40,85,165,1) !important;\n        border-radius: 10px !important;\n    }\n\n\n    /*Groups*/\n    ui-card-panel {\n        background-color: rgba(255,255,255,0.1) !important;\n        border-radius: 10px !important;\n    }\n    .nr-dashboard-theme ui-card-panel {\n        border: none !important;\n    }\n    /*Name groups*/\n    .nr-dashboard-theme ui-card-panel p.nr-dashboard-cardtitle {\n        color: rgba(255, 255, 255, 0.5) !important;\n    }\n\n\n    /*Bouttons*/\n    .nr-dashboard-theme .nr-dashboard-button .md-button {\n        background-color: rgba(255,255,255,.1) !important;\n    }\n    .md-button {\n        border-radius: 10px !important;\n    }\n    \n\n\n    /*Dropdown menu*/\n    .nr-dashboard-theme md-select-menu{\n        background-color: rgba(40,85,165,1) !important;\n    }\n    .nr-dashboard-theme md-select-menu, .nr-dashboard-theme md-select-menu md-option {\n        background-color: transparent !important;\n    }\n    .nr-dashboard-theme .md-select-menu-container {\n        border-radius: 10px !important;\n        border: none !important;\n    }\n    .nr-dashboard-theme md-select-menu md-option[selected] {\n        color: white !important;\n        background-color: #1a3566 !important;\n    }\n\n    /*Template*/\n    md-card>img, md-card>md-card-header img, md-card md-card-title-media img {\n        border-radius: 10px !important;\n    }\n\n    /* Color picker text BG */\n    .nr-dashboard-theme .color-picker-input-wrapper > input {\n        color: white !important;\n        background-color: transparent !important;\n    }\n    \n    /*Slider Controls*/\n    .nr-dashboard-theme .nr-dashboard-slider .md-sign {\n        background-color: #03a9f4 !important;\n    }\n    \n    .nr-dashboard-theme .nr-dashboard-slider .md-sign:after {\n        border-top-color: #03a9f4 !important;\n    }\n    \n    .nr-dashboard-theme .nr-dashboard-slider .md-focus-ring {\n        background-color: #03a9f4;\n        transform: scale(0.4);\n        opacity: 1;\n    }\n    \n    .nr-dashboard-theme .nr-dashboard-slider .md-thumb:after {\n        background-color: #03a9f4 !important;\n        border-color: #03a9f4 !important;\n    }\n    \n    .nr-dashboard-theme .nr-dashboard-slider .md-track-fill {\n        background-color: #03a9f4;\n    }\n    \n    /*Switch Controls*/\n    .nr-dashboard-theme .nr-dashboard-switch md-switch.md-checked .md-thumb {\n        background-color: #03a9f4;\n    }\n    \n    .nr-dashboard-theme .nr-dashboard-switch md-switch.md-checked .md-bar {\n        background-color: #03a9f4;\n    }\n    \n    .sliderlabels{\n        font-size: 13px;\n    }\n\n</style>",
+        "format": "<style>\n\n    /*Main background*/\n    body {\n        background: -webkit-linear-gradient(\n            133deg,\n            #020024 0%,\n            #090979 35%,\n            #00d4ff 100%\n            );\n    }\n\n    /*Top bar*/\n    body.nr-dashboard-theme md-toolbar,\n    body.nr-dashboard-theme md-content md-card {\n        background-color: transparent !important;\n        color: #FFFFFF !important;\n    }\n    \n    body.nr-dashboard-theme md-toolbar{\n        border-bottom-style: solid;\n        border-bottom-color: #0000001c;\n    }\n\n    /*Left menu*/\n    /*Sidebar*/\n    body.nr-dashboard-theme md-sidenav {\n        color: white !important;\n        background-color: rgba(0,0,0,0) !important;\n    }\n    /*Hover selection*/\n    a.md-no-style, button.md-no-style {\n        border-radius: 10px !important;\n    }\n    /*Selected*/\n    .nr-menu-item-active div button {\n        border-right: 4px solid rgb(41 98 255) !important;\n    }\n    /*List*/\n    body.nr-dashboard-theme md-sidenav div.md-list-item-inner {\n        color: white !important;\n        background-color: rgba(40,85,165,1) !important;\n        border-radius: 10px !important;\n    }\n\n    /*Groups*/\n    ui-card-panel {\n        background-color: rgba(255,255,255,0.1) !important;\n        border-radius: 10px !important;\n    }\n    .nr-dashboard-theme ui-card-panel {\n        border: none !important;\n    }\n    /*Name groups*/\n    .nr-dashboard-theme ui-card-panel p.nr-dashboard-cardtitle {\n        color: rgba(255, 255, 255, 0.5) !important;\n    }\n\n\n    /*Bouttons*/\n    .nr-dashboard-theme .nr-dashboard-button .md-button {\n        background-color: rgba(255,255,255,.1) !important;\n    }\n    .md-button {\n        border-radius: 10px !important;\n    }\n    \n\n    /*Dropdown menu*/\n    .nr-dashboard-theme md-select-menu{\n        background-color: rgba(40,85,165,1) !important;\n    }\n    .nr-dashboard-theme md-select-menu, .nr-dashboard-theme md-select-menu md-option {\n        background-color: transparent !important;\n    }\n    .nr-dashboard-theme .md-select-menu-container {\n        border-radius: 10px !important;\n        border: none !important;\n    }\n    .nr-dashboard-theme md-select-menu md-option[selected] {\n        color: white !important;\n        background-color: #1a3566 !important;\n    }\n\n    /*Template*/\n    md-card>img, md-card>md-card-header img, md-card md-card-title-media img {\n        border-radius: 10px !important;\n    }\n\n    /* Color picker text BG */\n    .nr-dashboard-theme .color-picker-input-wrapper > input {\n        color: white !important;\n        background-color: transparent !important;\n    }\n    \n    /*Slider Controls*/\n    .nr-dashboard-theme .nr-dashboard-slider .md-sign {\n        background-color: #03a9f4 !important;\n    }\n    \n    .nr-dashboard-theme .nr-dashboard-slider .md-sign:after {\n        border-top-color: #03a9f4 !important;\n    }\n    \n    .nr-dashboard-theme .nr-dashboard-slider .md-focus-ring {\n        background-color: #03a9f4;\n        transform: scale(0.4);\n        opacity: 1;\n    }\n    \n    .nr-dashboard-theme .nr-dashboard-slider .md-thumb:after {\n        background-color: #03a9f4 !important;\n        border-color: #03a9f4 !important;\n    }\n    \n    .nr-dashboard-theme .nr-dashboard-slider .md-track-fill {\n        background-color: #03a9f4;\n    }\n    \n    /*Switch Controls*/\n    .nr-dashboard-theme .nr-dashboard-switch md-switch.md-checked .md-thumb {\n        background-color: #03a9f4;\n    }\n    \n    .nr-dashboard-theme .nr-dashboard-switch md-switch.md-checked .md-bar {\n        background-color: #03a9f4;\n    }\n    \n    .nr-dashboard-chart {\n        height: calc(100% - 55px); !important\n        width: calc(100% - 60px); !important\n    }\n    \n    canvas.chart.chart-line {\n        height: calc(100% + 35px) !important;\n        width: calc(100% - 10px) !important;\n    }\n    \n    .sliderlabels{\n        font-size: 13px;\n    }\n\n</style>\n",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": false,
         "templateScope": "global",
         "className": "",
         "x": 680,
-        "y": 700,
+        "y": 600,
         "wires": [
             []
         ]

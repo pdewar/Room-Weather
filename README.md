@@ -15,7 +15,7 @@ The front end of the system is implemented using the web based Graphical User In
 
 #### Schematic
 
-![Room-Weather-0](https://github.com/pdewar/Room-Weather/blob/1f2ce739e955589ead66d188c82135e1b2f0f435/images/Circuit%20Setup_bb.jpeg)
+![Circuit Setup_bb](https://user-images.githubusercontent.com/101536624/177492047-c903e381-0a52-4b5e-9a36-1818ca1e9651.jpeg)
 
 #### Pin configuration
 
@@ -71,5 +71,4 @@ The front end of the system is implemented using the web based Graphical User In
 
 13. Go to Node red dashboard in web browser: http://localhost:1880/ui
 
-![Room-Weather-1](https://github.com/pdewar/Room-Weather/blob/1f2ce739e955589ead66d188c82135e1b2f0f435/images/UI.png)
-
+<img width="982" alt="UI" src="https://user-images.githubusercontent.com/101536624/177490424-ae44fcc4-da5e-4983-8d98-3ff972f23030.png">
